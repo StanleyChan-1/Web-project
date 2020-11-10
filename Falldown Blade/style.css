@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+.animationObject {
+  position: absolute;
+  width: 435px;
+  height: 75px;
+  background-color: rgb(126, 117, 117);
+  margin: 15px;
+  border-bottom-left-radius: 70px;
+  left: 35%;
+  top: 85%;
+  transform: rotateZ(-60deg);
+  box-shadow: 5px 5px 50px rgb(233, 200, 14);
+  /* animation */
+  animation: falldown 3s forwards 1 linear,
+    lightOfTheBlade 3s both infinite linear 3s;
+}
+
+.animationObject :nth-child(1) {
+  position: absolute;
+  background-color: rgba(223, 155, 30, 0.774);
+  height: 20px;
+  width: 190px;
+  left: 435px;
+  top: 25px;
+  display: inline-block;
+}
+
+.ground {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(117, 89, 52, 0.904);
+  bottom: 0%;
+}
+
+@keyframes falldown {
+  0% {
+    transform: rotateZ(720deg);
+    top: -100%;
+  }
+
+  100% {
+    transform: rotateZ(-60deg);
+    top: 85%;
+  }
+}
+
+@keyframes lightOfTheBlade {
+  0% {
+    box-shadow: 5px 5px 50px rgb(92, 91, 85);
+  }
+
+  100% {
+    box-shadow: 5px 5px 50px rgb(233, 200, 14);
+  }
+}

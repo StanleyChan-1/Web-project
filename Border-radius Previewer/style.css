@@ -1,0 +1,36 @@
+#prototype {
+  position: fixed;
+  border: 3px solid #73ad21;
+  border-radius: 0px 0px 0px 0px;
+  min-width: 400px;
+  min-height: 400px;
+}
+
+.cssCodeBar {
+  position: absolute;
+  bottom: 300px;
+  min-width: 400px;
+  min-height: 50px;
+}
+
+.customPanel {
+  position: absolute;
+  border: 3px solid #30ff20;
+  height: auto;
+  bottom: 0;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+#cssCode {
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  font-size: 14pt;
+}
+
+.panelItem {
+  padding: 2px;
+}

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+h1 {
+  font-size: 28pt;
+  padding: 1rem;
+}
+
+.convertBox {
+  background-color: aqua;
+  width: 50%;
+  height: 100%;
+  border-color: black;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: outset;
+  margin-top: 3rem;
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.binaryContainer {
+  padding: 1rem;
+  font-size: 22pt;
+}
+
+.binaryBox {
+  padding: 1rem;
+  font-size: 22pt;
+}
+
+#convertBtn {
+  border: none;
+  color: palevioletred;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  height: 35px;
+}

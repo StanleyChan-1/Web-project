@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-radius Previewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="prototype"></div>
+
+    <div class="cssCodeBar">
+        <input type="text" id="cssCode" placeholder="Your Css Code will generate here" />
+
+    </div>
+
+    <div class="customPanel">
+        <div class="panelItem">
+            <label for="topleft">Top-left corner</label>
+            <input type="range" min="0" max="100" id="topleft" oninput="replaceBorder()" value="0">
+        </div>
+
+        <div class="panelItem">
+            <label for="topright">Top-right corner</label>
+            <input type="range" min="0" max="100" id="topright" oninput="replaceBorder()" value="0">
+        </div>
+
+        <div class="panelItem">
+            <label for="botright">Bottom-right corner</label>
+            <input type="range" min="0" max="100" id="botright" oninput="replaceBorder()" value="0">
+        </div>
+
+        <div class="panelItem">
+            <label for="botleft">Bottom-left corner</label>
+            <input type="range" min="0" max="100" id="botleft" oninput="replaceBorder()" value="0">
+        </div>
+
+        <div class="panelItem">
+            <button id="generateBtn">Generate</button>
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>
