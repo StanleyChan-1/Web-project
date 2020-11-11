@@ -1,0 +1,103 @@
+body {
+  background-color: rgba(127, 255, 212, 0.397);
+  font-family: "Architects Daughter", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-style: oblique;
+  color: rebeccapurple;
+}
+
+h2 {
+  color: darkred;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: rgba(34, 0, 255, 0.542);
+}
+
+.firstList li {
+  margin: 15px;
+  color: rgb(235, 71, 99);
+  list-style: decimal-leading-zero;
+  font-size: larger;
+}
+
+.decoration {
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  top: -110px;
+  padding: 0;
+  width: 100%;
+  border-bottom: 3px solid #222;
+  height: 100px;
+}
+
+.decoration li {
+  position: relative;
+  list-style: none;
+  margin: 0 65px;
+  padding: 0;
+  display: inline-block;
+  width: 15px;
+  height: 30px;
+  border-radius: 50%;
+  top: 102px;
+  background: rgba(238, 255, 2, 0.932);
+
+  /* keyframes */
+  animation-name: evenflash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.decoration li:nth-child(odd) {
+  background: rgba(136, 68, 138, 0.932);
+  /* keyframes */
+  animation-name: oddflash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.decoration li:before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 10px;
+  border-radius: 4px;
+  top: -5px;
+  left: 0;
+  background: #444;
+}
+
+@keyframes evenflash {
+  0% {
+  }
+  50% {
+    background-color: rgb(226, 177, 43);
+  }
+  100% {
+    background: rgb(226, 43, 119);
+  }
+}
+
+@keyframes oddflash {
+  0% {
+  }
+  50% {
+    background-color: rgb(49, 220, 120);
+  }
+  100% {
+    background: rgb(43, 168, 226);
+  }
+}
