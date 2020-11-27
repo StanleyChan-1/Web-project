@@ -31,9 +31,17 @@ body {
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 300px;
+  max-width: 500px;
+  height: 850px;
   padding: 10px;
   background-color: white;
+}
+
+#chatRecord {
+  /* background-color: #4caf50; */
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
 }
 
 /* Full-width textarea */
@@ -44,7 +52,6 @@ body {
   border: none;
   background: #f1f1f1;
   resize: none;
-  min-height: 200px;
 }
 
 /* When the textarea gets focus, do something */
@@ -74,4 +81,13 @@ body {
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
+}
+
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
 }
