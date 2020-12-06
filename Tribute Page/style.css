@@ -1,0 +1,119 @@
+body {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 251, 22, 0.664),
+    rgba(255, 255, 255, 0.747),
+    rgba(51, 53, 36, 0.719)
+  );
+}
+
+#title {
+  text-align: center;
+  padding: 5px;
+  margin: 0 0 5px 0;
+  border-radius: 10px;
+  font-family: "Architects Daughter", cursive;
+  font-size: 2rem;
+}
+
+#title h5 {
+  font-size: 1.05rem;
+}
+
+#img-div {
+  background: linear-gradient(
+    360deg,
+    rgba(255, 251, 22, 0.315),
+    rgba(255, 255, 255, 0.404),
+    rgba(51, 53, 36, 0.445)
+  );
+  padding: 10px;
+  margin: 0;
+}
+
+#img-div img {
+  max-width: 40%;
+  display: block;
+  margin: 0 auto 25px auto;
+  border-radius: 10px;
+}
+
+#img-caption {
+  font-size: 0.75em;
+  text-align: center;
+  font-family: "Architects Daughter", cursive;
+}
+
+#tribute-info {
+  padding: 15px;
+  text-align: center;
+  font-family: "Hammersmith One", sans-serif;
+}
+
+#quote {
+  color: rgb(14, 116, 200);
+  text-align: left;
+  font-size: 1rem;
+  margin: 20px;
+  font-family: "Hammersmith One", sans-serif;
+}
+
+#wiki {
+  text-align: center;
+  font-size: 1rem;
+  margin: 20px;
+  font-family: "Hammersmith One", sans-serif;
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  line-height: 1.6;
+}
+li {
+  padding: 5px;
+  margin: 16px 0;
+  font-size: 0.85em;
+}
+@media (min-width: 600px) {
+  #img-div {
+    max-width: 100%;
+
+    margin: 0 auto;
+  }
+  #img-div img {
+    max-width: 35%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  #title {
+    text-align: center;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    border-radius: 10px;
+    font-family: "Architects Daughter", cursive;
+    font-size: 1.5rem;
+  }
+
+  #title h5 {
+    font-size: 1.3rem;
+  }
+  #img-caption {
+    font-size: 1.05em;
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+  }
+  ul {
+    max-width: 550px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+  }
+  li {
+    padding: 5px;
+    margin: 16px 0;
+    font-size: 1rem;
+  }
+}
