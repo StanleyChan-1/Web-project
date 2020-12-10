@@ -1,0 +1,103 @@
+#wrapper-block {
+  width: 85%;
+  height: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  border-radius: 15px;
+}
+
+#quote-box {
+  align-self: center;
+  border: 5px solid lightgray;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 209, 207, 1) 5%,
+    rgba(185, 214, 169, 1) 32%,
+    rgba(155, 232, 185, 1) 66%,
+    rgba(109, 214, 210, 1) 96%
+  );
+  box-shadow: 2px 2px 2px;
+}
+
+#text {
+  font-family: "Yeon Sung", cursive;
+  font-size: 26px;
+
+  color: #d2386c;
+}
+#author {
+  font-family: "Yeon Sung", cursive;
+  font-size: 24px;
+  color: #00a170;
+}
+#new-quote {
+  margin: 0 0 10px 0;
+  background-color: #d2386c;
+}
+
+#tweet-quote {
+  background-color: #14a6ca;
+}
+
+@media (max-width: 400px) {
+  #wrapper-block {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+
+    display: flex;
+    border-radius: 15px;
+  }
+
+  #quote-box {
+    align-self: center;
+    border: 5px solid lightgray;
+    border-radius: 10px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      135deg,
+      rgba(102, 209, 207, 1) 5%,
+      rgba(185, 214, 169, 1) 32%,
+      rgba(155, 232, 185, 1) 66%,
+      rgba(109, 214, 210, 1) 96%
+    );
+    box-shadow: 2px 2px 2px;
+  }
+  #text {
+    font-family: "Yeon Sung", cursive;
+    font-size: 18px;
+    justify-self: end;
+    color: #d2386c;
+  }
+  #author {
+    font-family: "Yeon Sung", cursive;
+    font-size: 16px;
+
+    color: #00a170;
+  }
+  #new-quote {
+    background-color: #d2386c;
+    margin: 0 0 10px 0;
+    padding: 10px;
+  }
+
+  #tweet-quote {
+    background-color: #14a6ca;
+  }
+}
