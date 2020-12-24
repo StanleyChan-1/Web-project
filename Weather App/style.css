@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: "Voltaire", sans-serif;
+}
+
+body {
+  background: url(https://images.unsplash.com/photo-1547532182-bf296f6be875?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#weather-app {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 25px 25px;
+}
+
+#location {
+  font-size: 72px;
+  margin: 5px 0 0 0;
+}
+
+#location-select-btn {
+  color: black;
+  background-color: rgba(250, 246, 215, 0.171);
+  border: none;
+  font-size: 24px;
+}
+
+#current-date {
+  font-size: 30px;
+}
+
+main {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#place {
+  font-size: 48px;
+}
+
+#degree {
+  font-size: 104px;
+}
+
+/* #min-and-max {
+  margin: 15px 0 0 0;
+  padding: 5px;
+  font-size: 22px;
+} */
+
+#main-section {
+  flex: 1;
+}
+
+#report-section {
+  /* background-color: aqua; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#temp-status {
+  flex: 1;
+}
+
+.forecast-content {
+  margin: 7.5px;
+  text-align: justify;
+  font-size: 20px;
+}
+.report-container {
+  text-align: center;
+  width: 100%;
+  min-height: 120px;
+}
+.report-container h3 {
+  margin: 15px 0 0 0;
+}
+.report-container p {
+  margin: 15px 0 0 0;
+}
+
+.report-img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  #place {
+    font-size: 38px;
+  }
+
+  #degree {
+    font-size: 70px;
+  }
+  .report-container {
+    font-size: 14px;
+    margin: 5% 0 0 0;
+  }
+  .report-img {
+    float: none;
+
+    width: 20%;
+    height: 10vh;
+  }
+  .forecast-content {
+    margin: 7.5px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+@media (max-width: 550px) {
+  main {
+    flex-direction: column;
+  }
+  #place {
+    font-size: 28px;
+  }
+
+  #degree {
+    font-size: 50px;
+  }
+  .report-container {
+    font-size: 14px;
+    margin: 5% 0 0 0;
+  }
+  .report-img {
+    float: none;
+
+    width: 20%;
+    height: 10vh;
+  }
+  .forecast-content {
+    margin: 7.5px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
