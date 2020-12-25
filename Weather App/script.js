@@ -14,6 +14,19 @@ window.onclick = function (event) {
   }
 };
 
+var getForecastData = () => {
+  fetch(
+    "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=en"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      displayForecastData(data);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+};
+
 var getTempStats = () => {
   fetch(
     "https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=flw&lang=en"
@@ -220,5 +233,68 @@ var getRecordDate = (data) => {
   };
 };
 
+var displayForecastData = (data) => {
+  var toggle = false;
+  if (toggle === false) {
+    data.weatherForecast.forEach((item) => {
+      document.getElementById(
+        "forecast-nine"
+      ).innerHTML += ` <div id="forecast-nine">
+            <div class="forecast-card">
+                <h2>${item.forecastDate} <span>${item.week}</span></h2>
+
+                <img src="https://www.hko.gov.hk/images/wxicon/pic54.png" alt="icon">
+                <p>${item.forecastWind}</p>
+                <p>${item.forecastWeather}</p>
+                <div>Temperature: <span>${item.forecastMintemp.value}c -
+                        ${item.forecastMaxtemp.value}c</span></div>
+                <div>Humidity: <span>${item.forecastMinrh.value}% -
+                        ${item.forecastMaxrh.value}%</span></div>
+            </div>
+
+
+        
+        </div>
+           <a class="prev" onclick="plusSlides(false)">&#10094;</a>
+            <a class="next" onclick="plusSlides(true)">&#10095;</a>
+        `;
+    });
+  }
+  document.getElementsByClassName("forecast-card")[0].className =
+    "forecast-card active";
+  toggle = true;
+};
+
+var plusSlides = (n) => {
+  var card = document.getElementsByClassName("forecast-card");
+  var length = card.length;
+  var currentDisplay = 0;
+  if (n === true) {
+    for (let i = 0; i < length; i++) {
+      if (card[i].classList.length === 2) {
+        card[i].className = "forecast-card";
+        currentDisplay = i + 1;
+        // max= 8
+      }
+    }
+  } else {
+    for (let i = 0; i < length; i++) {
+      if (card[i].classList.length === 2) {
+        card[i].className = "forecast-card";
+        currentDisplay = i - 1;
+        // min = 0
+      }
+    }
+  }
+  if (currentDisplay > 8) {
+    currentDisplay = 0;
+  } else if (currentDisplay < 0) {
+    currentDisplay = 8;
+  }
+  card[currentDisplay].className = "forecast-card active";
+  console.log(currentDisplay);
+};
+
 getResult();
 getTempStats();
+getForecastData();
